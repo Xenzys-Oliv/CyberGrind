@@ -1,2 +1,2 @@
-# ProjetoPap
-Projeto pra escola
+# CyberGrind
+Projeto feito por diversão
