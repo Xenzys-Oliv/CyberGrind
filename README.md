@@ -1,2 +1,2 @@
 # CyberGrind
-Projeto feito por diversão
+Project made for fun / Projeto feito por diversão
