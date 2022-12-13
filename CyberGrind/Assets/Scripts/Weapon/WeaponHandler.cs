@@ -18,6 +18,10 @@ public class WeaponHandler : NetworkBehaviour
     [Header("Collision")]
     public LayerMask collisionLayers;
 
+    [Header("Shoot")]
+    public AudioSource source;
+    public AudioClip clip;
+
 
     [Networked(OnChanged = nameof(OnFireChanged))]
     public bool isFiring { get; set; }
@@ -33,6 +37,7 @@ public class WeaponHandler : NetworkBehaviour
     HPHandler hpHandler;
     NetworkPlayer networkPlayer;
     NetworkObject networkObject;
+
 
     private void Awake()
     {
@@ -166,6 +171,11 @@ public class WeaponHandler : NetworkBehaviour
     void OnFireRemote()
     {
         if (!Object.HasInputAuthority)
+        {
             fireParticleSystem.Play();
+            //AudioSource
+            source.PlayOneShot(clip);
+        }
+            
     }
 }

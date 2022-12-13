@@ -312,19 +312,19 @@ Camera:
     height: 1
   near clip plane: 0.3
   far clip plane: 1000
-  field of view: 60
+  field of view: 80
   orthographic: 0
   orthographic size: 5
   m_Depth: -1
   m_CullingMask:
     serializedVersion: 2
     m_Bits: 55
-  m_RenderingPath: -1
+  m_RenderingPath: 3
   m_TargetTexture: {fileID: 0}
   m_TargetDisplay: 0
   m_TargetEye: 3
-  m_HDR: 1
-  m_AllowMSAA: 1
+  m_HDR: 0
+  m_AllowMSAA: 0
   m_AllowDynamicResolution: 0
   m_ForceIntoRT: 0
   m_OcclusionCulling: 1
@@ -514,7 +514,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Type: 1
   SphereRadius: 0
-  BoxExtents: {x: 0.5, y: 1, z: 0.5}
+  BoxExtents: {x: 0.4, y: 0.9, z: 0}
   Offset: {x: 0, y: 0, z: 0}
   Root: {fileID: 1852728354347325528}
   GizmosColor: {r: 1, g: 0.92156863, b: 0.015686275, a: 1}
@@ -711,6 +711,8 @@ MonoBehaviour:
   collisionLayers:
     serializedVersion: 2
     m_Bits: 129
+  source: {fileID: 8425204928092360294}
+  clip: {fileID: 8300000, guid: f55b20183be5f2e458d6ecfa31e2f2f2, type: 3}
   _isFiring: 0
 --- !u!114 &1852728354347325528
 MonoBehaviour:
@@ -744,7 +746,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _interpolationDataSource: 0
   _isDead: 0
-  uiOnHitColor: {r: 0.8962264, g: 0.2747864, b: 0.2747864, a: 0.9411765}
+  uiOnHitColor: {r: 0.4811321, g: 0, b: 0, a: 0.9411765}
   uiOnHitImage: {fileID: 3971609654798122313}
   bodyMeshRenderer: {fileID: 5378213703285569550}
   playerModel: {fileID: 6860565821398973337}
@@ -1158,6 +1160,14 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 1002878860943196849}
     m_Modifications:
+    - target: {fileID: 1338655140668263137, guid: 9a3e7fc0afb14d44bae17e75a08145a0, type: 3}
+      propertyPath: m_Color.a
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1338655140668263137, guid: 9a3e7fc0afb14d44bae17e75a08145a0, type: 3}
+      propertyPath: m_Color.r
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 1884861643040205391, guid: 9a3e7fc0afb14d44bae17e75a08145a0, type: 3}
       propertyPath: m_Pivot.x
       value: 0
@@ -1322,6 +1332,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: PlayerUICanvas
       objectReference: {fileID: 0}
+    - target: {fileID: 8829630826697984989, guid: 9a3e7fc0afb14d44bae17e75a08145a0, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 9a3e7fc0afb14d44bae17e75a08145a0, type: 3}
 --- !u!114 &3971609654798122313 stripped
@@ -1400,6 +1414,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Gun
       objectReference: {fileID: 0}
+    - target: {fileID: 6426334748249514351, guid: fc9c47ef068abce44afbb23a75a3d1c0, type: 3}
+      propertyPath: m_PlayOnAwake
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: fc9c47ef068abce44afbb23a75a3d1c0, type: 3}
 --- !u!198 &670099464081310014 stripped
@@ -1410,5 +1428,10 @@ ParticleSystem:
 --- !u!4 &2937585060775518698 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 362219081622703843, guid: fc9c47ef068abce44afbb23a75a3d1c0, type: 3}
+  m_PrefabInstance: {fileID: 3297402771153202953}
+  m_PrefabAsset: {fileID: 0}
+--- !u!82 &8425204928092360294 stripped
+AudioSource:
+  m_CorrespondingSourceObject: {fileID: 6426334748249514351, guid: fc9c47ef068abce44afbb23a75a3d1c0, type: 3}
   m_PrefabInstance: {fileID: 3297402771153202953}
   m_PrefabAsset: {fileID: 0}

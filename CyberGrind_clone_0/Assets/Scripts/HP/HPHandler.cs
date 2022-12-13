@@ -96,7 +96,7 @@ public class HPHandler : NetworkBehaviour
         //Player died
         if (HP <= 0)
         {
-            networkInGameMessages.SendInGameRPCMessage(damageCausedByPlayerNickname, $"Killed <b>{networkPlayer.nickName.ToString()}</b>");
+            networkInGameMessages.SendInGameRPCMessage(damageCausedByPlayerNickname, $"Matou <b>{networkPlayer.nickName.ToString()}</b>");
 
             Debug.Log($"{Time.time} {transform.name} died");
 
